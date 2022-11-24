@@ -1,3 +1,6 @@
  aws_access_key_id=‘somerandomkeyhere’,
   aws_secret_access_key=‘somerandom’
 this file has secrets
+
+
+connectstring = "DRIVER={MySQL ODBC 5.3 ANSI Driver};SERVER=den1.mysql#.gear.host;DATABASE=DBName;UID=DBUser;PWD=myPassword;"
