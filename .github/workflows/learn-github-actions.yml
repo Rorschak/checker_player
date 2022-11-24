@@ -1,13 +1,17 @@
-name: scanner_action
-run-name: ${{ github.actor }} is learning GitHub Actions
-on: [push]
+name: Leaked Secrets Scan
+on: [pull_request]
 jobs:
-  check-scan-for-code:
+  TruffleHog:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
         with:
-          node-version: '14'
-      - run: npm install -g bats
-      - run: bats -v
+          fetch-depth: 0
+      - name: TruffleHog OSS
+        uses: trufflesecurity/trufflehog@main
+        with:
+          path: ./
+          base: ${{ github.event.repository.default_branch }}
+          head: HEAD
+          extra_args: --debug --only-verified
