@@ -4,3 +4,6 @@ this file has secrets
 
 
 connectstring = "DRIVER={MySQL ODBC 5.3 ANSI Driver};SERVER=den1.mysql#.gear.host;DATABASE=DBName;UID=DBUser;PWD=myPassword;"
+
+
+connectstring = "DRIVER={MySQL ODBC 5.3 ANSI Driver};SERVER=den1.mysql#.gear.host;DATABASE=DBName;UID=DBUsder;PWD=myPasswordsdsd;"
